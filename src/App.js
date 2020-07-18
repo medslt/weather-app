@@ -1,9 +1,12 @@
 import React from 'react';
 import Main from './Main';
+import StoreProvider from './storeManegement/StoreProvider';
 
 function App() {
   return (
-    <Main/>
+    <StoreProvider>
+      <Main/>
+    </StoreProvider>
   );
 }
 
