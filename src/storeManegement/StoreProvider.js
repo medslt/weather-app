@@ -24,10 +24,10 @@ const StoreProvider = ({children}) => {
         try {
             const url =  getUrl('weather');
             const response = await fetch(url);
-           const data = await response.json();
+            const data = await response.json();
            
-           const newTodayWeatherTemp = parseInt(data.main.temp);
-           setTodayWeatherTemp(newTodayWeatherTemp);
+            const newTodayWeatherTemp = parseInt(data.main.temp);
+            setTodayWeatherTemp(newTodayWeatherTemp);
         } catch (error) {
             console.info({error});
         }
