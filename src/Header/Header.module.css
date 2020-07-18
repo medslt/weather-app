@@ -1,0 +1,45 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    background: #333440;
+    color: #dadce1;
+    padding: 5px 10px;
+}
+
+
+.timeBlock{
+    size: 10px;
+    font-size: x-small;
+}
+
+.time{
+    padding: 0 3px;
+}
+
+.oval1{
+    height: 5px;
+    width: 3px;
+    background-color: #ee6f04;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 2px;
+}
+
+.oval2{
+    height: 5px;
+    width: 3px;
+    background-color: #ee6d04a4;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 2px;
+}
+
+.oval3{
+    height: 5px;
+    width: 3px;
+    background-color: #ee6d0478;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 2px;
+}
