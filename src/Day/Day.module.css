@@ -9,6 +9,7 @@
     display: flex;
     justify-content: space-between;
     height: 90px;
+    margin-bottom: 5px;
 }
 
 .dayInfo {
@@ -16,4 +17,14 @@
     display: flex;
     justify-content: space-between;
     width: 200px;
+    
+}
+
+.dayIcon  {
+    display: flex;
+    flex-direction: column;
+    font-size: xx-small;
+    margin-right: 10px;
+    width: 80px;
+    align-items: flex-end;
 }
