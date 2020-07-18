@@ -1,0 +1,18 @@
+.dayBlock{
+    background-color: #57565c;
+    color: #dadce1;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    padding-left: 10px;
+    font-size: x-large;
+    display: flex;
+    justify-content: space-between;
+}
+
+.dayInfo {
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+}

@@ -1,4 +1,11 @@
 .main {
     width: 600px;
     margin: auto;
+    height: 100vh;
+}
+
+.days {
+    background-color: black;
+    height: 100%;
+    padding: 10px;
 }

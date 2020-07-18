@@ -4,13 +4,21 @@
     height: 50px;
     background: #333440;
     color: #dadce1;
-    padding: 5px 10px;
+    padding: 0 10px;
+    align-items: center;
 }
 
 
 .timeBlock{
     size: 10px;
     font-size: x-small;
+    border: solid #2b2d36;
+    height: 25px;
+    border-width: 2px;
+    border-radius: 5px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
 }
 
 .time{
