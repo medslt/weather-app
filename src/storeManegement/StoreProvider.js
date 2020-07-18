@@ -32,7 +32,7 @@ const StoreProvider = ({children}) => {
             const newTodayWeatherTemp = parseInt(data.main.temp);
             setTodayWeatherTemp(newTodayWeatherTemp);
         } catch (error) {
-            console.info({error});
+            console.error({error});
         }
     }
 
@@ -44,6 +44,7 @@ const StoreProvider = ({children}) => {
            
             const daysInfo = [];
             let tempDay = -1;
+            
             data.list.forEach((tempInfo) => {
                if (tempDay !== dayjs(tempInfo.dt_txt).day()) {
                    
@@ -57,13 +58,12 @@ const StoreProvider = ({children}) => {
                  }
 
                  daysInfo.push(dayInfo);
-                 console.info(dayInfo)
                }
             })
             
             setFiveDaysWeatherInfo(daysInfo.slice(1,6)); // remove today
         } catch (error) {
-            console.info({error});
+            console.error({error});
         }
     }
 
