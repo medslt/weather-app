@@ -5,7 +5,7 @@ import styles from './ProgressBar.module.css';
 
 const ProgressBar = () => {
     return (
-        <div className="container">    
+        <div>    
             <div className= {[styles.progress, styles.progressMoved].join(' ')}>
                 <div className={styles.progressBar} >
                 </div>                       

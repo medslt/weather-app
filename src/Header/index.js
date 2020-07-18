@@ -1,10 +1,12 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import styles from './Header.module.css';
+import storeContext from '../storeManegement/storeContext'; 
 import ProgressBar from '../ProgressBar'
 
 
 
 const Header = () => {
+    const {todayWeatherTemp} = useContext(storeContext);
     return (
         <div className={styles.header}>
             <div className={styles.headerInfo}>
@@ -21,7 +23,7 @@ const Header = () => {
                     <span className={styles.oval1}/>  
                 </div>
                 <div className={styles.textXlarge}> 
-                    12°
+                    { todayWeatherTemp && `${todayWeatherTemp}°`}
                 </div>
             </div>
             <div className={styles.progressInfo}>

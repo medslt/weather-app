@@ -19,7 +19,7 @@ const StoreProvider = ({children}) => {
             const response = await fetch(url);
            const data = await response.json();
            
-           const newTodayWeatherTemp = data.main.temp;
+           const newTodayWeatherTemp = parseInt(data.main.temp);
            setTodayWeatherTemp(newTodayWeatherTemp);
         } catch (error) {
             console.info({error});
@@ -27,7 +27,7 @@ const StoreProvider = ({children}) => {
     }
 
     return (
-        <Provider value={todayWeatherTemp}>
+        <Provider value={{todayWeatherTemp}}>
             {children}
         </Provider>
     )
