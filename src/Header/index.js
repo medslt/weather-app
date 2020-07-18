@@ -26,7 +26,7 @@ const Header = () => {
             </div>
             <div className={styles.progressInfo}>
                 <div className={styles.progressText}>
-                    Reloading in 20 seconds
+                    Reloading in 20s
                 </div>
                 <ProgressBar/>
             </div>
