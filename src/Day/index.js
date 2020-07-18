@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {memo} from 'react';
 import styles from './Day.module.css';
 
 const Day = ({dayInfo}) => {
@@ -19,4 +19,4 @@ const Day = ({dayInfo}) => {
     )
 }
 
-export default Day;
+export default memo(Day);

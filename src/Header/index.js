@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, {useContext, memo} from 'react';
 import storeContext from '../storeManegement/storeContext';
 import TimeBlock from './TimeBlock';
 import ProgressBar from '../ProgressBar'
@@ -32,4 +32,4 @@ const Header = () => {
 }
 
 
-export default Header;
+export default memo(Header);
