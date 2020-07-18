@@ -17,10 +17,12 @@ const getUrl = (path) => {
 const StoreProvider = ({children}) => {
     const [todayWeatherTemp, setTodayWeatherTemp] = useState();
     const [fiveDaysWeatherInfo, setFiveDaysWeatherInfo] = useState([]);
+    const [secondsToReload, setSecondsToReload] = useState(60);
 
     useEffect(() => {
-        fetchTodayWeather();
-        fetchFiveDaysWeatherInfo();
+        Promise.all([fetchTodayWeather(), fetchFiveDaysWeatherInfo()]).then((values) => {
+            reloadWeatherData();
+          });
     }, []);
 
     const fetchTodayWeather = async () => {
@@ -67,8 +69,22 @@ const StoreProvider = ({children}) => {
         }
     }
 
+    const reloadWeatherData = () => {
+        let secCounter = 0;
+        setInterval(() => {
+            secCounter++;
+            setSecondsToReload(60 - secCounter);
+            if (secCounter === 60) {
+                fetchTodayWeather();
+                fetchFiveDaysWeatherInfo();
+                secCounter = 0;
+            }
+            
+        }, 1000);
+    }
+
     return (
-        <Provider value={{todayWeatherTemp, fiveDaysWeatherInfo}}>
+        <Provider value={{todayWeatherTemp, fiveDaysWeatherInfo, secondsToReload}}>
             {children}
         </Provider>
     )

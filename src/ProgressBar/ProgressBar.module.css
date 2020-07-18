@@ -8,9 +8,8 @@
   .progressBar {
     height: 10px;
     border-radius: 30px;
-    transition: 0.4s linear;  
+    transition: 1s linear;  
     transition-property: width, background-color;    
     background-color: #ff9600;  
-    width: 40%;
   }
   

@@ -6,8 +6,9 @@ import styles from './Header.module.css';
 
 
 const Header = () => {
-    const {todayWeatherTemp} = useContext(storeContext);
-    
+    const {todayWeatherTemp, secondsToReload} = useContext(storeContext);
+    const progressBarWidth = `${parseInt((60 - secondsToReload) * 10 / 6)}%` ;
+        
     return (
         <div className={styles.header}>
             <div className={styles.headerInfo}>
@@ -20,10 +21,10 @@ const Header = () => {
                 </div>
             </div>
             <div className={styles.progressInfo}>
-                <div className={styles.progressText}>
-                    Reloading in 20s
+                <div className={styles.progressText} >
+                    Reloading in {secondsToReload}s
                 </div>
-                <ProgressBar/>
+                <ProgressBar width={progressBarWidth}/>
             </div>
 
         </div>
