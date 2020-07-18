@@ -9,6 +9,7 @@ const Main = () => {
             <Header/>
             <div className={styles.days}>
                 <Day/>
+               
             </div>
 
         </div>

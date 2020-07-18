@@ -1,0 +1,16 @@
+.progress {
+    padding: 3px;
+    border-radius: 30px;
+    background: rgba(0, 0, 0, 0.25);  
+    box-shadow: inset 0 0 10px #000000;
+}
+  
+  .progressBar {
+    height: 10px;
+    border-radius: 30px;
+    transition: 0.4s linear;  
+    transition-property: width, background-color;    
+    background-color: #ff9600;  
+    width: 40%;
+  }
+  

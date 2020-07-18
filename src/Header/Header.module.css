@@ -1,10 +1,16 @@
-.header{
+.header {
     display: flex;
-    justify-content: space-between;
-    height: 50px;
+    flex-direction: column;
+    height: 90px;
     background: #333440;
     color: #dadce1;
     padding: 0 10px;
+    justify-content: space-around;
+}
+.headerInfo{
+    display: flex;
+    justify-content: space-between;
+    color: #dadce1;
     align-items: center;
 }
 
@@ -50,4 +56,15 @@
     border-radius: 50%;
     display: inline-block;
     margin-right: 2px;
+}
+
+.textXlarge{
+    font-size: x-large;
+    text-transform: uppercase;
+
+}
+
+.progressText {
+    font-size: x-small;
+    padding: 0 0 5px 10px;
 }
