@@ -3,7 +3,14 @@ import storeContext from './storeContext';
 
 
 const {Provider} = storeContext;
+const getUrl = (path) => {
+    const params = '?q=London,uk&units=metric&appid=2cefe1fd9c145b11b8254ac699e6da04';
+    const baseUrl = 'http://api.openweathermap.org/data/2.5/';
 
+    const url = `${baseUrl}${path}${params}`
+
+    return url;
+};
 
 const StoreProvider = ({children}) => {
     const [todayWeatherTemp, setTodayWeatherTemp] = useState();
@@ -15,7 +22,7 @@ const StoreProvider = ({children}) => {
 
     const fetchTodayWeather = async () => {
         try {
-            const url = 'http://api.openweathermap.org/data/2.5/weather?q=London,uk&units=metric&appid=2cefe1fd9c145b11b8254ac699e6da04';
+            const url =  getUrl('weather');
             const response = await fetch(url);
            const data = await response.json();
            
