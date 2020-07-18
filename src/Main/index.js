@@ -10,7 +10,7 @@ const Main = () => {
         <div className={styles.main}>
             <Header/>
             <div className={styles.days}>
-                {fiveDaysWeatherInfo && fiveDaysWeatherInfo.map((dayInfo) => (<Day dayInfo={dayInfo}/>))}
+                {fiveDaysWeatherInfo && fiveDaysWeatherInfo.map((dayInfo, i) => (<Day dayInfo={dayInfo} key={i}/>))}
                
             </div>
 
