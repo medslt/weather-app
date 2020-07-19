@@ -10,7 +10,7 @@ const DayTemperature = ({temperature}) => {
             spanRef.current.style.fontSize = 'small'
             setTimeout(() => {
                 spanRef.current.style.fontSize = 'inherit'
-            }, 1000);
+            }, 300);
         }
     }, [temperature])
 
