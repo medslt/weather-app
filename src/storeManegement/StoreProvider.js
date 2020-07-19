@@ -7,7 +7,7 @@ import storeContext from './storeContext';
 const {Provider} = storeContext;
 const getUrl = (path) => {
     const params = '?q=London,uk&units=metric&appid=2cefe1fd9c145b11b8254ac699e6da04';
-    const baseUrl = 'http://api.openweathermap.org/data/2.5/';
+    const baseUrl = 'https://api.openweathermap.org/data/2.5/';
 
     const url = `${baseUrl}${path}${params}`
 
