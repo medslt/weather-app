@@ -1,4 +1,5 @@
 import React, {memo} from 'react';
+import DayTemperature from '../DayTemperature';
 import styles from './Day.module.css';
 
 const Day = ({dayInfo}) => {
@@ -6,7 +7,7 @@ const Day = ({dayInfo}) => {
     return (
         <div className={styles.dayBlock}>
             <div className={styles.dayInfo}>
-                <span>{day}</span> <span> { temp && `${temp}°`} </span> 
+                <span>{day}</span> <DayTemperature temperature={temp}/>
             </div>
 
             <div className={styles.dayIcon}>

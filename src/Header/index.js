@@ -1,7 +1,8 @@
 import React, {useContext, memo} from 'react';
 import storeContext from '../storeManegement/storeContext';
 import TimeBlock from './TimeBlock';
-import ProgressBar from '../ProgressBar'
+import ProgressBar from '../ProgressBar';
+import DayTemperature from '../DayTemperature';
 import styles from './Header.module.css';
 
 
@@ -16,8 +17,8 @@ const Header = () => {
                     LONDON
                 </div>
                 <TimeBlock/>
-                <div className={styles.textXlarge}> 
-                    { todayWeatherTemp && `${todayWeatherTemp}°`}
+                <div className={styles.temp}> 
+                    <DayTemperature temperature={todayWeatherTemp}/>
                 </div>
             </div>
             <div className={styles.progressInfo}>

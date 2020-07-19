@@ -1,0 +1,3 @@
+.textAnimation {
+    transition: 0.7s cubic-bezier(0.57,-0.53, 0.11, 1.6);
+}
